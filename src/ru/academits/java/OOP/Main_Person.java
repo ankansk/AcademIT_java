@@ -7,16 +7,13 @@ public class Main_Person {
         String name = "Petr";
         String middleName = "Petrovich";
         String familyName = "Petrov";
-        int age = 32;
 
         Person person = new Person(name, middleName, familyName);
-        Person person1 = new Person(age);
 
-        person.printNameAndAge();
+        person.printFullName();
         person.setName("Ivan");
         person.setMiddleName("Ivanovich");
         person.setFamilyName("Ivanov");
-        person.setAge(40);
-        person.printNameAndAge();
+        person.printFullName();
     }
 }
