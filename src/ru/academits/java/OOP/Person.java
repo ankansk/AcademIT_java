@@ -8,11 +8,15 @@ public class Person {
     private String middleName;
     private String familyName;
     private int age;
+    public static final int MIN_AGE = 18;
 
-    public Person(String name, String middleName, String familyName, int age) {
+    public Person(String name, String middleName, String familyName) {
         this.name = name;
         this.middleName = middleName;
         this.familyName = familyName;
+    }
+
+    public Person(int age) {
         this.age = age;
     }
 
@@ -60,7 +64,12 @@ public class Person {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if (age > MIN_AGE) {
+            this.age = age;
+            System.out.println("Возраст был изменен");
+        } else {
+            System.out.println("Возраст меньше 18");
+        }
     }
 
     @Override
