@@ -1,11 +1,13 @@
 package ru.academits.java.OOP;
 
+import java.time.Year;
+
 public class Person {
 
     private String name;
     private String middleName;
     private String familyName;
-    private int age;
+    private static int age;
 
     public Person(String name, String middleName, String familyName) {
         this.name = name;
@@ -73,7 +75,8 @@ public class Person {
         System.out.println("Новый пользователь: " + toString());
     }
 
-    public static int calculateBirthYear(int age, int currentYear) {
+    public static int calculateBirthYear(int age) {
+        int currentYear = Year.now().getValue();
         return currentYear - age;
     }
 }

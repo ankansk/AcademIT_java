@@ -7,12 +7,12 @@ public class DigitsNumber {
         Scanner console = new Scanner(System.in);
         System.out.println("Введите целое число:");
         int number = Math.abs(console.nextInt());
-        System.out.println("Сумма всех цифр числа:" + DigitSum(number));
+        System.out.println("Сумма всех цифр числа:" + digitSum(number));
         System.out.println("Сумма нечетных цифр числа:" + oddDigitSum(number));
         System.out.println("Максимальное число:" + maxDigit(number));
     }
 
-    public static int DigitSum(int number) {
+    public static int digitSum(int number) {
         int sum = 0;
         for (; number > 0; number /= 10)
             sum += number % 10;

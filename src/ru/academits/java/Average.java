@@ -13,26 +13,26 @@ public class Average {
         }
         System.out.println("Введите конечное число диапазона");
         int end = console.nextInt();
-        while (start > end) {
+        while (start >= end) {
             System.out.println("Конечное число должно быть больше начального");
             end = console.nextInt();
         }
         int sum = 0;
         int count = 0;
+        int evenSum = 0;
+        int evenCount = 0;
+
         for (int i = start; i <= end; i++) {
             sum = sum + i;
             count++;
-        }
-        double average = (double) sum / count;
-        System.out.printf("Среднее арифметическое всех чисел диапазона = %.2f%n", average);
-
-        int evenSum = 0;
-        int evenCount = 0;
-        for (int i = start; i <= end; i++)
             if (i % 2 == 0) {
                 evenSum = evenSum + i;
                 evenCount++;
             }
+        }
+        double average = (double) sum / count;
+        System.out.printf("Среднее арифметическое всех чисел диапазона = %.2f%n", average);
+
         double evenAverage = (double) evenSum / evenCount;
         System.out.printf("Среднее арифметическое четных чисел диапазона = %.2f%n", evenAverage);
     }
