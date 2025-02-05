@@ -7,7 +7,7 @@ public class Person {
     private String name;
     private String middleName;
     private String familyName;
-    private static int age;
+    private int age;
 
     public Person(String name, String middleName, String familyName, int age) {
         this.name = name;
