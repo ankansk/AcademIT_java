@@ -7,8 +7,9 @@ public class Main_Person {
         String name = "Petr";
         String middleName = "Petrovich";
         String familyName = "Petrov";
+        int age = 30;
 
-        Person person = new Person(name, middleName, familyName);
+        Person person = new Person(name, middleName, familyName, age);
 
         person.printFullName();
         person.setName("Ivan");

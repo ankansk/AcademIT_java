@@ -9,13 +9,10 @@ public class Person {
     private String familyName;
     private static int age;
 
-    public Person(String name, String middleName, String familyName) {
+    public Person(String name, String middleName, String familyName, int age) {
         this.name = name;
         this.middleName = middleName;
         this.familyName = familyName;
-    }
-
-    public Person(int age) {
         this.age = age;
     }
 
@@ -75,7 +72,7 @@ public class Person {
         System.out.println("Новый пользователь: " + toString());
     }
 
-    public static int calculateBirthYear(int age) {
+    public static int calculateBirthYear() {
         int currentYear = Year.now().getValue();
         return currentYear - age;
     }
